@@ -222,3 +222,68 @@ function addPaddle(e){
 
 </body>
 </html>
+
+<html>
+<head>
+<title>Leash</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<script type="text/javascript" src="https://static.codehs.com/gulp/36e37b4dc22da6ec9176230526cae4508491169e/chs-js-lib/chs.js"></script>
+
+
+<style>
+canvas {
+    border: 1px solid black;
+    display: inline-block;
+    vertical-align: top;
+}
+
+pre {
+    border: 1px solid black;
+    display: inline-block;
+    width: 400px;
+    height: 500px;
+    background-color: #F5F5F5;
+}
+</style>
+
+</head>
+
+<body>
+<h1>Leash</h1>
+
+
+
+<canvas
+width="400"
+height="500"
+class="codehs-editor-canvas"></canvas>
+
+<script>
+window.onload = function() {
+
+    var BALL_RADIUS = 30;
+var line = new Line(getWidth()/2, getHeight()/2, getWidth()/2, getHeight()/2);
+var ball = new Circle(30);
+function start() {
+    add(line);
+    add(ball);
+	mouseMoveMethod(move);
+}
+function move(e){
+    line.setEndpoint(e.getX(), e.getY());
+    ball.setPosition(e.getX(), e.getY());
+    ball.setColor(Randomizer.nextColor());
+}
+
+
+    if (typeof start === 'function') {
+        start();
+    }
+};
+</script>
+
+</body>
+</html>
+
