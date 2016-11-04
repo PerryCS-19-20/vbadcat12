@@ -98,10 +98,13 @@ function start(){
         
     }
     addBall();
-    setTimer(action, 30);
+	mouseClickMethod(setTimer)
     addPaddle();
     mouseMoveMethod(move);
 }
+function setTimer(){
+	setTimer(action, 30)
+}	
 function addBricks(i, o){
     brick = new Rectangle(BRICK_WIDTH, BRICK_HEIGHT);
     setBrickColor(i, brick);
