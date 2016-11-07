@@ -4,7 +4,7 @@
     <title>404 Not Found</title>
 		<style>
 			body {
-				background: url("coolgif.gif") center;
+				background: url("giphy.gif");
 				background-Size: cover;
 				height: 100%;
 		</style>
@@ -189,6 +189,7 @@ function checkLose(){
 function addBall(){
     ball = new Circle(15);
     ball.setPosition(getWidth()/2, getHeight()/2);
+	ball.setColor(Color.pink);
     add(ball);
 }
 function move(e){
@@ -231,4 +232,3 @@ function addPaddle(e){
 
 </body>
 </html>
-//https://media.giphy.com/media/dnOWeBbaR39f2/giphy.gif
