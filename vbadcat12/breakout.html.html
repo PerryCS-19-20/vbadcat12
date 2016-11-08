@@ -1,0 +1,189 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Breakout</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		<script type="text/javascript" src="https://static.codehs.com/gulp/cb01b4a22ffd3971572a8a1ab9f3b7c4cb17f383/chs-js-lib/chs.js"></script>
+		<script>
+                      window.onload = function() {
+<canvas
+width="400"
+height="500"
+class="codehs-editor-canvas"></canvas>
+window.onload = function() {
+
+    /* Constants for bricks */
+var NUM_ROWS = 8;
+var BRICK_TOP_OFFSET = 10;
+var BRICK_SPACING = 2;
+var NUM_BRICKS_PER_ROW = 10;
+var BRICK_HEIGHT = 10;
+var SPACE_FOR_BRICKS = getWidth() - (NUM_BRICKS_PER_ROW + 1) * BRICK_SPACING;
+var BRICK_WIDTH = SPACE_FOR_BRICKS / NUM_BRICKS_PER_ROW;
+var brick;
+/* Constants for ball and paddle */
+var PADDLE_WIDTH = 80;
+var PADDLE_HEIGHT = 15;                 
+var PADDLE_OFFSET = 10;
+var paddle;
+var BALL_RADIUS = 15;
+var ball;
+var dx = 5;
+var dy = 5;
+var score = 0;
+var thescore;
+var lives = 3;
+var urlives;
+
+function start(){
+    thescore = new Text(score, "10pt Arial");
+    thescore.setPosition(getWidth()/1 - 20, getHeight()/1 - 15);
+    urlives = new Text("Lives: " + lives , "10pt Arial");
+    urlives.setPosition(20, getHeight()/1 - 20);
+    add(urlives);
+    add(thescore);
+    for(var i = 0; i < 8; i++){
+        for(var o = 0; o < 10; o++){
+            addBricks(i, o);
+        }   
+        
+    }
+    addBall();
+    setTimer(action, 30);
+    addPaddle();
+    mouseMoveMethod(move);
+}
+
+function addBricks(i, o){
+    brick = new Rectangle(BRICK_WIDTH, BRICK_HEIGHT);
+    setBrickColor(i, brick);
+    brick.setPosition((BRICK_WIDTH * o) + (o/SPACE_FOR_BRICKS/10) + o*2+2,i+i *
+        BRICK_HEIGHT + 2 + BRICK_HEIGHT +i*2);
+   
+    add(brick);
+}
+function action(){
+    checkWalls();
+    ball.move(dx, dy)
+    checkLose();
+}
+function checkWalls(){
+	var elem = getElementAt(ball.getX(),ball.getY() - BALL_RADIUS);
+	if(ball.getX() + ball.getRadius() > getWidth()){
+		dx = -dx;
+	}
+	if(ball.getX() - ball.getRadius() < 0){
+		dx = -dx;
+	}
+	if(ball.getY() + ball.getRadius() > getHeight() || ball.getY() + 15 == paddle.getY()
+	&& ball.getX() - 15 > paddle.getX() - 40 && ball.getX() < paddle.getX() + 80){
+		dy = -dy;
+	}
+	if(ball.getY() - ball.getRadius() < 0){
+		dy = -dy;
+		
+	}
+	//var elem = getElementAt(ball.getX(),ball.getY() - BALL_RADIUS);
+	if(elem != null){
+	    remove(elem);
+	    score ++;
+	    thescore.setText(score);
+	    dy = -dy;
+	}
+	if( elem != null && ball.getX() + ball.getRadius() == elem.getX() && ball.getY() == elem.getY() + BRICK_HEIGHT){
+	    dx = -dx;
+	    remove(elem);
+	    score ++;
+	    thescore.setText(score);
+	}
+	if( elem != null && ball.getX() - ball.getRadius() == elem.getX() + BRICK_WIDTH && ball.getY() == elem.getY() + BRICK_HEIGHT){
+	    dx = -dx;
+	    remove(elem);
+	    score ++;
+	    thescore.setText(score);
+	}
+}
+function beginTimer(){
+    setTimer(action, 30);
+}
+function checkLose(){
+    if(ball.getY() + 15 == getHeight()/1 && lives > 0){
+        stopTimer(action);
+        ball.setPosition(getWidth()/2 - 15, getHeight()/2 - 15);
+        lives --;
+        urlives.setText("Lives: " + lives);
+        mouseClickMethod(beginTimer);
+    }
+    if(lives == 0){
+        stopTimer(action);
+        var lose = new Text("Bro...Do You Even Breakout...Bro?", "18pt Arial");
+        lose.setPosition(getWidth()/2 - lose.getWidth()/2, getHeight()/2 );
+        add(lose);
+        remove(ball);
+    }
+    if(score == 80){
+        stopTimer(action);
+        var win = new Text("Ye Got Me!", "20pt Arial");
+        win.setPosition(getWidth()/2 - win.getWidth()/2, getHeight()/2 - win.getHeight()/2);
+        add(win);
+        remove(ball);
+    }
+}
+function addBall(){
+    ball = new Circle(15);
+    ball.setPosition(getWidth()/2, getHeight()/2);
+    add(ball);
+}
+function move(e){
+    if(e.getX() == 40){
+        paddle.setPosition(40, getHeight()/1 - 30);
+    }
+    if(e.getX() == getWidth()/1 - 40){
+        paddle.setPosition(getWidth()/1 - 40, getHeight()/1 - 30)
+    }
+    if(e.getX() != 40 || getWidth()/2){
+        paddle.setPosition(e.getX() - 30, getHeight()/1 - 30);
+    }
+}
+function setBrickColor(i, brick){
+    if(i == 1 || i == 0){
+        brick.setColor(Color.red);
+    } 
+    if(i == 2 || i==3){
+        brick.setColor(Color.purple);
+    }
+    if(i == 4 ||i== 5){
+        brick.setColor(Color.green);
+    }
+    if(i == 6 || i==7){
+       brick.setColor(Color.blue);
+    }
+}
+function addPaddle(e){
+    paddle = new Rectangle(80, 15);
+    paddle.setPosition(getWidth()/2 - 40, getHeight()/1 - 30);
+    add(paddle);
+}
+
+
+    if (typeof start === 'function') {
+        start();
+    }
+};
+</script>
+                        if (typeof start === 'function') {
+                            start();
+                        }
+                    };
+		<style>
+			canvas {
+    				border: 1px solid black;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="canvasContainer" width="100%" style="width: 100%; height: 100%; overflow: hidden;">
+			<canvas width="400" height="500" class="codehs-editor-canvas"></canvas>
+		</div>
+	</body>
+</html>
