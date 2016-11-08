@@ -5,7 +5,7 @@
 	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
   </head>
-  <body />
+  <body>
     <img src="http://vignette1.wikia.nocookie.net/mugen/images/d/d0/Are-You-Fucking-Kidding-Me-Rage-Face-Meme-Temp.png/revision/latest?cb=20140201173952" width="180px" height="180px" align="right"/>
     <img src="https://image.spreadshirtmedia.com/image-server/v1/designs/11989526,width=178,height=178/unhappy-rage-face.png" width="180px" align="left"/>
     <br>
@@ -223,108 +223,5 @@ function addPaddle(e){
 };
 </script>
 
-<html>
-<head>
-<title>Trail</title>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-
-<script type="text/javascript" src="https://static.codehs.com/gulp/644d13b229f7bef9e5db2cdb70b5cb772329fdc5/chs-js-lib/chs.js"></script>
-
-
-<style>
-canvas {
-    border: 1px solid black;
-    display: inline-block;
-    vertical-align: top;
-}
-
-pre {
-    border: 1px solid black;
-    display: inline-block;
-    width: 400px;
-    height: 500px;
-    background-color: #F5F5F5;
-}
-</style>
-
-</head>
-
-<body>
-<h1>Trail</h1>
-
-
-
-<canvas id="this"
-width="100%"
-height="100%"
-class="codehs-editor-canvas"></canvas>
-
-
-<script>
-window.onload = function() {
-
-    var MAX_BOUNCES = 20;
-var counter = 0;
-var ball;
-var dx = 8;
-var dy = 8;
-
-/* This program has a ball bounce around the screen. 
- * It's path is drawn by drawing different colored balls everywhere it goes.
- */
-function start(){
-	ball = new Circle(20);
-	ball.setPosition(100, 100);
-	add(ball);
-	setTimer(draw, 20);
-    
-}
-
-function draw(){
-	checkWalls();
-	ball.move(dx, dy);
-	counter++;
-	if(counter == 550){
-    stopTimer(draw);
-    }
-}
-
-function checkWalls(){
-	// Bounce off right wall
-	if(ball.getX() + ball.getRadius() > getWidth()){
-		dx = -dx;
-	}
-	
-	// Bounce off left wall
-	if(ball.getX() - ball.getRadius() < 0){
-		dx = -dx;
-	}
-	
-	// Bounce off bottom wall
-	if(ball.getY() + ball.getRadius() > getHeight()){
-		dy = -dy;
-	}
-	
-	// Bounce off top wall
-	if(ball.getY() - ball.getRadius() < 0){
-		dy = -dy;
-	}
-	var circle = new Circle(10);
-	circle.setColor(Color.cyan);
-	circle.setPosition(ball.getX(), ball.getY());
-	add(circle);
-}
-
-
-    if (typeof start === 'function') {
-        start();
-    }
-};
-</script>
-
-</body>
 </html>
 
-</body>
-</html>
