@@ -23,7 +23,6 @@
     <ul >
       <li><a href="theuselessweb.com">theuselessweb.com</a></li>
     </ul>
-  </body>
 <h1>Breakout</h1>
 
 
@@ -57,6 +56,7 @@ var score = 0;
 var thescore;
 var lives = 3;
 var urlives;
+
 function start(){
     thescore = new Text(score, "10pt Arial");
     thescore.setPosition(getWidth()/1 - 20, getHeight()/1 - 15);
@@ -71,10 +71,11 @@ function start(){
         
     }
     addBall();
-	setTimer(action, 30);
+    setTimer(action, 30);
     addPaddle();
     mouseMoveMethod(move);
 }
+
 function addBricks(i, o){
     brick = new Rectangle(BRICK_WIDTH, BRICK_HEIGHT);
     setBrickColor(i, brick);
