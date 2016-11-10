@@ -7,13 +7,18 @@ and open the template in the editor.
     <head>
         <title>alert test</title>
         <script>
-            function changeColor('black'){
+            function changeColor('Black'){
                 document.body.style.backgroundColor = Black;
                 document.body.style.color = White;
+            }
+            function resetColor('White') {
+                document.body.style.backgroundColor = White;
+                document.body.style.color = Black;
             }
         </script>
     </head>
     <body>
-        <span onmouseover="changeColor('black');">Do not make contact with this text!</span>
+        <span onmouseover="changeColor('Black');" 
+              onmouseout="resetColor('White');">Do not make contact with this text!</span>
     </body>
 </html>
