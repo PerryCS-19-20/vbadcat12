@@ -6,6 +6,10 @@ and open the template in the editor.
 <html>
     <head>
         <title>alert test</title>
+        #alert {
+            text-align: center;
+            font-size: 100px;
+        }
         <script>
             function changeColor('Black'){
                 document.body.style.backgroundColor = Black;
@@ -18,7 +22,7 @@ and open the template in the editor.
         </script>
     </head>
     <body>
-        <span onmouseover="changeColor('Black');" 
+        <span id="alert" onmouseover="changeColor('Black');" 
               onmouseout="resetColor('White');"
               ><b>Do not make contact with this text!</b></span>
     </body>
