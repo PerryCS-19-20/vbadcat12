@@ -5,17 +5,17 @@
 		<script>
 			function clicked(Gold) {
 				document.body.style.backgroundColor = Gold;
-                                document.body.style.textColor = Randomizer.nextColor();
+                                document.body.style.color = Randomizer.nextColor();
 			}	
                         function reset(Gold) {
-				document.body.style.backgroundColor = White;
-                                document.body.style.textColor = Black;
+				document.body.style.backgroundColor = Gold;
+                                document.body.style.color = Black;
 			}
 		</script>
                 <link rel="stylesheet" type="text/css" href="style.css">
 	</head>
 	<body id="colot-test-body">
-                <span style="text-align: center;" onmouseover="reset('Black');"><h1>Move your mouse up and down!!!</h1></span>
+                <span style="text-align: center;" onmouseover="reset('White');"><h1>Move your mouse up and down!!!</h1></span>
                 <br>
                 <br>
 		<span style="text-align: center;" onmouseover="clicked('Gold');"><h1>Gold</h1></span>
