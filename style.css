@@ -1,4 +1,4 @@
-body {
+#404-body {
 				background: url("hexagon.png");
                                 background-color: orange;
 				background-Size: cover;
@@ -7,4 +7,19 @@ body {
         text-align: center;
         font-size: 50px;
     alignment-adjust: middle;
+}
+#alert-body {
+    background-color: gold;
+    color: green;
+    text-align: center;
+}
+#pop-up-body {
+    background-color: black;
+    color: lightgreen;
+    text-align: center;
+}
+#bio-body {
+    background-color: black;
+    color: lightblue;
+    text-align: center;
 }
