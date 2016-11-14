@@ -1,29 +1,16 @@
-<!--
-To change this template, choose Tools | Templates
-and open the template in the editor.
--->
-<!DOCTYPE html>
+<!doctype html>
 <html>
-    <head>
-        <title>alert test</title>
-        #alert {
-            text-align: center;
-            font-size: 100px;
-        }
-        <script>
-            function changeColor('Black'){
-                document.body.style.backgroundColor = Black;
-                document.body.style.color = White;
-            }
-            function resetColor('White') {
-                document.body.style.backgroundColor = White;
-                document.body.style.color = Black;
-            }
-        </script>
-    </head>
-    <body>
-        <span id="alert" onmouseover="changeColor('Black');" 
-              onmouseout="resetColor('White');"
-              ><b>Do not make contact with this text!</b></span>
-    </body>
+	<head>
+		<title>JavaScript Events</title>
+		<script>
+			function clicked() {
+				alert("Do you even rules???");
+			}	
+		</script>
+	</head>
+
+
+	<body>
+		<span onclick="clicked();" style="text-align: center;">Don't click this text.</span>
+	</body>
 </html>
