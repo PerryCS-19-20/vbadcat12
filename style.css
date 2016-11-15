@@ -26,3 +26,8 @@
 #color-test-body {
     text-align: center;
 }
+#index-body{
+    background-color: Black;
+    color: White;
+    alignment-adjust: center;
+}
