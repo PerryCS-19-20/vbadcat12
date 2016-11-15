@@ -8,7 +8,7 @@
             function testHTML(){
                 var userInput = document.getElementById("inputText");
                 var thespan = document.getElementById("elspan");
-                userInput.value = thespan.innerHTML
+                thespan.innerHTML = userInput.value;
             }
         </script>
     </head>
@@ -18,3 +18,4 @@
         <span id="elspan"></span>
     </body>
 </html>
+ 
