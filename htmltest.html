@@ -1,0 +1,24 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTML Tester</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script>
+            function testHTML(){
+                var userInput = document.getElementById("inputText");
+                var thespan = document.getElementById("elspan");
+                thespan.innerHTML = userInput.value();
+                
+            }
+        </script>
+    </head>
+    <body>
+        <textarea rows="10" cols="80" id="inputText">Input html text here</textarea>
+        <button onclick="testHTML();">Test</button>
+        <span id="elspan"></span>
+    </body>
+</html>
