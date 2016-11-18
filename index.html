@@ -4,9 +4,19 @@
     <title>Vee's Page</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <script>
+        var ugh
+        var dx=0;
+        var dy=1;
+        function move(ugh){
+            ugh.move(dx, dy);
+        }
         function clicked(color) {
             document.body.style.color = color;
             document.body.textContent = "I TOLD YOU NOT TO";
+            ugh = newText("-.-");
+            ugh.setPosition(getWidth()/2, getHeight()/2);
+            add(ugh);
+            setTimer(move, 50);
         }
     </script>
   </head>
