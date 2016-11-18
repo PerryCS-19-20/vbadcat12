@@ -8,14 +8,16 @@
         var dx=0;
         var dy=1;
         function move(ugh){
-            ugh.move(dx, dy);
+            ugh.style.top=ugh.style.top+dx;
+            ugh.style.left= ugh.style.left+dy;
         }
         function clicked(color) {
             document.body.style.color = color;
             document.body.textContent = "I TOLD YOU NOT TO";
-            ugh = new Text("-.-");
-            ugh.setPosition(getWidth()/2, 1);
-            add(ugh);
+            var div = document.createElement("div");
+            div.textContent = "-.-";
+            div.style.position="absolute";
+            document.body.appendChild(div);
             setTimer(move, 50);
         }
     </script>
