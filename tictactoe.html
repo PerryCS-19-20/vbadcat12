@@ -13,14 +13,14 @@ and open the template in the editor.
             function mark(id){
                 var box = document.getElementById(id);
                 if(player == 1){
-                    player = 2;
-                }else{
-                    player = 1;
-                }
-                if(player == 1){
                     box.textContent = "X";
                 }else{
                     box.textContent = "O";
+                }
+                if(player == 1){
+                    player = 2;
+                }else{
+                    player = 1;
                 }
             }
         </script>
