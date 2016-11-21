@@ -14,6 +14,7 @@ and open the template in the editor.
             var win = false;
             function mark(id){
                 clicks++;
+                var table = document.getElementById("table");
                 var box = document.getElementById(id);
                 if(player == 1){
                     box.textContent = "X";
@@ -27,14 +28,13 @@ and open the template in the editor.
                 }
                 if(clicks == 9 ){
                     var tie = new Text("Tie Game");
-                    tie.setPosition(getWidth()/2, getHeight()/2);
-                    add(tie);
+                    table.appendChild
                 }
             }
         </script>
     </head>
     <body>
-        <table border="2">
+        <table id="table" border="2">
             <tr>
                 <td id="1" onclick="mark('1');" style="width: 100px; height:100px; text-align: center;">.</td>
                 <td id="2" onclick="mark('2');" style="width: 100px; height:100px; text-align: center;">.</td>
