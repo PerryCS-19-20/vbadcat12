@@ -10,7 +10,10 @@ and open the template in the editor.
         <link rel="stylesheet" type="text/css" href="style.css">
         <script>
             var player = 1;
+            var clicks = 0;
+            var win = false;
             function mark(id){
+                clicks++;
                 var box = document.getElementById(id);
                 if(player == 1){
                     box.textContent = "X";
@@ -21,6 +24,11 @@ and open the template in the editor.
                     player = 2;
                 }else{
                     player = 1;
+                }
+                if(clicks == 9 ){
+                    var tie = new Text("Tie Game");
+                    tie.setPosition(getWidth()/2, getHeight()/2);
+                    add(tie);
                 }
             }
         </script>
