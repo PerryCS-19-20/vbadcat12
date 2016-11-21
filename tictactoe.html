@@ -10,8 +10,8 @@ and open the template in the editor.
         <link rel="stylesheet" type="text/css" href="style.css">
         <script>
             var player = 1;
-            function mark(){
-                var box = document.getElementById();
+            function mark(id){
+                var box = document.getElementById(id);
                 if(player == 1){
                     player = 2;
                 }else{
@@ -28,19 +28,19 @@ and open the template in the editor.
     <body>
         <table border="2">
             <tr>
-                <td id="1" onclick="mark();" style="width: 100px; height:100px; text-align: center;">.</td>
-                <td id="2" onclick="mark();" style="width: 100px; height:100px; text-align: center;">.</td>
-                <td id="3" onclick="mark();" style="width: 100px; height:100px; text-align: center;">.</td>  
+                <td id="1" onclick="mark('1');" style="width: 100px; height:100px; text-align: center;">.</td>
+                <td id="2" onclick="mark('2');" style="width: 100px; height:100px; text-align: center;">.</td>
+                <td id="3" onclick="mark('3');" style="width: 100px; height:100px; text-align: center;">.</td>  
             </tr>
             <tr>
-                <td id="4" onclick="mark();" style="width: 100px; height:100px; text-align: center;">.</td>
-                <td id="5" onclick="mark();" style="width: 100px; height:100px; text-align: center;">.</td>
-                <td id="6" onclick="mark();" style="width: 100px; height:100px; text-align: center;">.</td>   
+                <td id="4" onclick="mark('4');" style="width: 100px; height:100px; text-align: center;">.</td>
+                <td id="5" onclick="mark('5');" style="width: 100px; height:100px; text-align: center;">.</td>
+                <td id="6" onclick="mark('6');" style="width: 100px; height:100px; text-align: center;">.</td>   
             </tr>
             <tr>
-                <td id="7" onclick="mark();" style="width: 100px; height:100px; text-align: center;">.</td>
-                <td id="8" onclick="mark();" style="width: 100px; height:100px; text-align: center;">.</td>
-                <td id="9" onclick="mark();" style="width: 100px; height:100px; text-align: center;">.</td>
+                <td id="7" onclick="mark('7');" style="width: 100px; height:100px; text-align: center;">.</td>
+                <td id="8" onclick="mark('8');" style="width: 100px; height:100px; text-align: center;">.</td>
+                <td id="9" onclick="mark('9');" style="width: 100px; height:100px; text-align: center;">.</td>
             </tr>
         </table>
     </body>
