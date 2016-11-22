@@ -12,15 +12,7 @@ and open the template in the editor.
             var player = 1;
             var clicks = 0;
             var win = false;
-            var box1 = document.getElementById("1");
-            var box2 = document.getElementById("2");
-            var box3 = document.getElementById("3");
-            var box4 = document.getElementById("4");
-            var box5 = document.getElementById("5");
-            var box6 = document.getElementById("6");
-            var box7 = document.getElementById("7");
-            var box8 = document.getElementById("8");
-            var box9 = document.getElementById("9");
+
             function mark(id){
                 clicks++;
                 var table = document.getElementById("table");
@@ -36,17 +28,29 @@ and open the template in the editor.
                 }else{
                     player = 1;
                 }
-                
-                if(box1.textContent == "X"){
-                        //var win = new Text("Player 1 Wins"); 
-                        //document.body.appendChild(win);
-                        document.body.style.backgroundColor = "Gold";
-                }
+                checkWinner();
+
                 
                 if(clicks == 9 ){
                     var tie = new Text("Tie Game");
                     table.appendChild(tie);
                 }
+                function checkWinner(){        
+                    var box1 = document.getElementById("1");
+                    var box2 = document.getElementById("2");
+                    var box3 = document.getElementById("3");
+                    var box4 = document.getElementById("4");
+                    var box5 = document.getElementById("5");
+                    var box6 = document.getElementById("6");
+                    var box7 = document.getElementById("7");
+                    var box8 = document.getElementById("8");
+                    var box9 = document.getElementById("9");
+                    if(box1.textContent == "X"){
+                        //var win = new Text("Player 1 Wins"); 
+                        //document.body.appendChild(win);
+                        document.body.style.backgroundColor = "Gold";
+                    }
+
             }
         </script>
         <style>
