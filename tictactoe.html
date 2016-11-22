@@ -35,7 +35,7 @@ and open the template in the editor.
                     var tie = new Text("Tie Game");
                     table.appendChild(tie);
                 }
-                function checkWinner(){        
+                function checkWinner(){ 
                     var box1 = document.getElementById("1");
                     var box2 = document.getElementById("2");
                     var box3 = document.getElementById("3");
@@ -46,8 +46,6 @@ and open the template in the editor.
                     var box8 = document.getElementById("8");
                     var box9 = document.getElementById("9");
                     if(box1.textContent == "X"){
-                        //var win = new Text("Player 1 Wins"); 
-                        //document.body.appendChild(win);
                         document.body.style.backgroundColor = "Gold";
                     }
 
