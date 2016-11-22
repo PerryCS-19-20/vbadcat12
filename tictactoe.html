@@ -30,16 +30,17 @@ and open the template in the editor.
                 }else{
                     box.textContent = "O";
                 }
+                
                 if(player == 1){
                     player = 2;
                 }else{
                     player = 1;
                 }
-                if(box1.textContent = "X" && box2.textContent = "X" && box3.textContent = "X"
-                   || box1.textContent = "X" && box5.textContent = "X" && box9.textContent = "X"){
+                
+                if(box1.textContent = "X"){
                         var win = new Text("Player 1 Wins");
-                        removeAll();
                 }
+                
                 if(clicks == 9 ){
                     var tie = new Text("Tie Game");
                     table.appendChild(tie);
