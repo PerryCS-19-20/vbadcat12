@@ -22,6 +22,7 @@ and open the template in the editor.
                     box.style.color = "Purple";
                 }else{
                     box.textContent = "O";
+                    box.style.color = "Green";
             }
                 
                 if(player == 1){
@@ -40,34 +41,45 @@ and open the template in the editor.
                     if(box1.textContent == box2.textContent && box1.textContent == box3.textContent &&
                         box1.textContent != "|=|"){
                             document.body.style.backgroundColor = "Gold";
+                            win();
                         }
                     if(box4.textContent == box5.textContent && box4.textContent == box6.textContent &&
                         box4.textContent != "|=|"){
                         document.body.style.backgroundColor = "Gold";
+                        win();
                     }
                     if(box7.textContent == box8.textContent && box7.textContent == box9.textContent &&
                         box7.textContent != "|=|"){
                         document.body.style.backgroundColor = "Gold";
+                        win();
                     }
                     if(box1.textContent == box4.textContent && box1.textContent == box7.textContent &&
                         box1.textContent != "|=|"){
                         document.body.style.backgroundColor = "Gold";
+                        win();
                         }
                     if(box2.textContent == box5.textContent && box2.textContent == box8.textContent &&
                         box2.textContent != "|=|"){
                         document.body.style.backgroundColor = "Gold";
+                        win();
                         }
                     if(box3.textContent == box6.textContent && box3.textContent == box9.textContent &&
                         box3.textContent != "|=|"){
                         document.body.style.backgroundColor = "Gold";
+                        win();
                     }
                     if(box1.textContent == box5.textContent && box1.textContent == box9.textContent &&
                         box1.textContent != "|=|"){
                         document.body.style.backgroundColor = "Gold";
+                        win();
                         }
                         if(box3.textContent == box5.textContent && box3.textContent == box7.textContent &&
                         box3.textContent != "|=|"){
                         document.body.style.backgroundColor = "Gold";
+                        if(box3.textContent == "X"){
+                             win("X");
+                        }else{
+                            win("O");
                         }
                 }
                 function checkWinner(){ 
