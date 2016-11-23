@@ -37,10 +37,6 @@ and open the template in the editor.
                     var tie = new Text("Tie Game");
                     table.appendChild(tie);
                 }
-                function win(letter){
-                    var wintext = new Text("P1 Wins");
-                    table.appendChild(wintext);
-                }
                 function checkBoxes(box1, box2, box3, box4, box5, box6, box7, box8, box9){
                     if(box1.textContent == box2.textContent && box1.textContent == box3.textContent &&
                         box1.textContent != "|=|"){
