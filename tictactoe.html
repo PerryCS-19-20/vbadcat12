@@ -11,18 +11,18 @@ and open the template in the editor.
         <script>
             var player = 1;
             var clicks = 0;
-            var winstatement = false;
+            //var winstatement = false;
                 function mark(id){
                     clicks++;
                     var table = document.getElementById("table");
                     var box = document.getElementById(id);
-                    if(player == 1 && winstatement == false){
+                    if(player == 1){
                         box.textContent = "X";
                         box.style.color = "Purple";
                     }else{
                         box.textContent = "O";
                         box.style.color = "Green";
-                }
+                    }
                 
                     if(player == 1){
                         player = 2;
@@ -40,11 +40,11 @@ and open the template in the editor.
                         if(letter == "X"){
                             var wintext = new Text("P1 Wins!");
                             table.appendChild(wintext);
-                            winstatement = true;
+                            //winstatement = true;
                         }else{
                             var losetext = new Text("P2 Wins!");
                             table.appendChild(losetext);
-                            winstatement = true;
+                            //winstatement = true;
                         }
                 }
                      function checkBoxes(box1, box2, box3, box4, box5, box6, box7, box8, box9){
