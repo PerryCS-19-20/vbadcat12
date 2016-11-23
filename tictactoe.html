@@ -11,69 +11,72 @@ and open the template in the editor.
         <script>
             var player = 1;
             var clicks = 0;
-            var win = false;
-
-            function mark(id){
-                clicks++;
-                var table = document.getElementById("table");
-                var box = document.getElementById(id);
-                if(player == 1){
-                    box.textContent = "X";
-                    box.style.color = "Purple";
-                }else{
-                    box.textContent = "O";
-                    box.style.color = "Green";
-            }
-                
-                if(player == 1){
-                    player = 2;
-                }else{
-                    player = 1;
-                }
-                checkWinner();
-
-                
-                if(clicks == 9){
-                    var tie = new Text("Tie Game");
-                    table.appendChild(tie);
-                }
-               function win(letter){
-                    if(letter == "X"){
-                        var wintext = new Text("P1 Wins!");
-                        table.appendChild(wintext);
+            var winstatement = false;
+            while(winstatement == false){
+                function mark(id){
+                    clicks++;
+                    var table = document.getElementById("table");
+                    var box = document.getElementById(id);
+                    if(player == 1){
+                        box.textContent = "X";
+                        box.style.color = "Purple";
                     }else{
-                        var losetext = new Text("P2 Wins!");
-                        table.appendChild(losetext);
+                        box.textContent = "O";
+                        box.style.color = "Green";
+                }
+                
+                    if(player == 1){
+                        player = 2;
+                    }else{
+                        player = 1;
                     }
-               }
-                function checkBoxes(box1, box2, box3, box4, box5, box6, box7, box8, box9){
-                    if(box1.textContent == box2.textContent && box1.textContent == box3.textContent &&
-                        box1.textContent != "|=|"){
-                        document.body.style.backgroundColor = "Gold";
-                        if(box3.textContent == "X"){
-                             win("X");
-                        }else{
-                            win("O");
-                        }
-                        }
-                    if(box4.textContent == box5.textContent && box4.textContent == box6.textContent &&
-                        box4.textContent != "|=|"){
-                        document.body.style.backgroundColor = "Gold";
-                        if(box3.textContent == "X"){
-                             win("X");
-                        }else{
-                            win("O");
-                        }
+                 checkWinner();
+
+                
+                    if(clicks == 9){
+                        var tie = new Text("Tie Game");
+                        table.appendChild(tie);
                     }
-                    if(box7.textContent == box8.textContent && box7.textContent == box9.textContent &&
-                        box7.textContent != "|=|"){
-                        document.body.style.backgroundColor = "Gold";
-                        if(box3.textContent == "X"){
-                             win("X");
+                    function win(letter){
+                        if(letter == "X"){
+                            var wintext = new Text("P1 Wins!");
+                            table.appendChild(wintext);
+                            winstatement = true;
                         }else{
-                            win("O");
+                            var losetext = new Text("P2 Wins!");
+                            table.appendChild(losetext);
+                            winstatement = true;
                         }
-                    }
+                }
+                     function checkBoxes(box1, box2, box3, box4, box5, box6, box7, box8, box9){
+                        if(box1.textContent == box2.textContent && box1.textContent == box3.textContent &&
+                            box1.textContent != "|=|"){
+                            document.body.style.backgroundColor = "Gold";
+                            if(box3.textContent == "X"){
+                             win("X");
+                            }else{
+                            win("O");
+                            }
+                            }
+                        if(box4.textContent == box5.textContent && box4.textContent == box6.textContent &&
+                            box4.textContent != "|=|"){
+                            document.body.style.backgroundColor = "Gold";
+                            if(box3.textContent == "X"){
+                             win("X");
+                            }else{
+                                win("O");
+                            }
+                        }
+                        if(box7.textContent == box8.textContent && box7.textContent == box9.textContent &&
+                            box7.textContent != "|=|"){
+                            document.body.style.backgroundColor = "Gold";
+                            if(box3.textContent == "X"){
+                                win("X");
+                            }else{
+                                win("O");
+                            }
+                        }
+                     }
                     if(box1.textContent == box4.textContent && box1.textContent == box7.textContent &&
                         box1.textContent != "|=|"){
                         document.body.style.backgroundColor = "Gold";
