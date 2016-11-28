@@ -39,11 +39,12 @@ and open the template in the editor.
                     }
                 }
                     function win(letter){
-                        if(letter == "X"){
+                        if(letter == "X" && iswin == false){
                             var wintext = new Text("P1 Wins!");
                             table.appendChild(wintext);
                             iswin = true;
-                        }else{
+                        }
+                        if(letter == "O" && iswin == false){
                             var losetext = new Text("P2 Wins!");
                             table.appendChild(losetext);
                             iswin = true;
