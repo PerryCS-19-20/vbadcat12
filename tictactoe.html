@@ -49,78 +49,54 @@ and open the template in the editor.
                             iswin = true;
                         }
                     }
+                    function dowin(box){
+                        if(box.textContent == "X"){
+                            win("X");
+                        }else{
+                            win("O");
+                        }
+                    }
                      function checkBoxes(box1, box2, box3, box4, box5, box6, box7, box8, box9){
                         if(box1.textContent == box2.textContent && box1.textContent == box3.textContent &&
                             box1.textContent != "|=|"){
                             document.body.style.backgroundColor = "Gold";
+                            dowin(box1);
                         }
-                            if(box3.textContent == "X"){
-                                win("X");
-                            }else{
-                                win("O");
-                            }
+
                         if(box4.textContent == box5.textContent && box4.textContent == box6.textContent &&
                             box4.textContent != "|=|"){
                             document.body.style.backgroundColor = "Gold";
-                            if(box4.textContent == "X"){
-                                win("X");
-                            }else{
-                                win("O");
-                            }
+                            dowin(box4);
                         }
                         if(box7.textContent == box8.textContent && box7.textContent == box9.textContent &&
                             box7.textContent != "|=|"){
                             document.body.style.backgroundColor = "Gold";
-                            if(box7.textContent == "X"){
-                                win("X");
-                            }else{
-                                win("O");
-                            }
+                            dowin(box7);
                         }
                         if(box1.textContent == box4.textContent && box1.textContent == box7.textContent &&
                             box1.textContent != "|=|"){
                             document.body.style.backgroundColor = "Gold";
-                            if(box4.textContent == "X"){
-                                win("X");
-                            }else{
-                                win("O");
-                            }
+                            dowin(box1);
                         }
                         if(box2.textContent == box5.textContent && box2.textContent == box8.textContent &&
                             box2.textContent != "|=|"){
                             document.body.style.backgroundColor = "Gold";
-                            if(box2.textContent == "X"){
-                                win("X");
-                            }else{
-                                win("O");
-                            }
+                            dowin(box2);
                         }
                         if(box3.textContent == box6.textContent && box3.textContent == box9.textContent &&
                             box3.textContent != "|=|"){
                             document.body.style.backgroundColor = "Gold";
-                            if(box9.textContent == "X"){
-                                win("X");
-                            }else{
-                                win("O");
-                            }
+                            dowin(box6);
                         }
                         if(box1.textContent == box5.textContent && box1.textContent == box9.textContent &&
                             box1.textContent != "|=|"){
                             document.body.style.backgroundColor = "Gold";
-                            if(box5.textContent == "X"){
-                                win("X");
-                            }else{
-                                win("O");
-                            }
+                            dowin(box5);
                         }
                         if(box3.textContent == box5.textContent && box3.textContent == box7.textContent &&
                             box3.textContent != "|=|"){
                             document.body.style.backgroundColor = "Gold";
-                            if(box3.textContent == "X"){
-                                win("X");
-                            }else{
-                                win("O");
-                            }
+                            dowin(box7);
                         }
                     }
                 function checkWinner(){ 
