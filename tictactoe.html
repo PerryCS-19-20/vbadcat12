@@ -44,7 +44,7 @@ and open the template in the editor.
                             table.appendChild(wintext);
                             iswin = true;
                         }else{
-                            var losetext = new Text("P1 Wins!");
+                            var losetext = new Text("P2 Wins!");
                             table.appendChild(losetext);
                             iswin = true;
                         }
@@ -53,17 +53,17 @@ and open the template in the editor.
                         if(box1.textContent == box2.textContent && box1.textContent == box3.textContent &&
                             box1.textContent != "|=|"){
                             document.body.style.backgroundColor = "Gold";
-                            if(box3.textContent == "X"){
-                             win("X");
-                            }else{
-                            win("O");
-                            }
                         }
+                            if(box3.textContent == "X"){
+                                win("X");
+                            }else{
+                                win("O");
+                            }
                         if(box4.textContent == box5.textContent && box4.textContent == box6.textContent &&
                             box4.textContent != "|=|"){
                             document.body.style.backgroundColor = "Gold";
-                            if(box3.textContent == "X"){
-                             win("X");
+                            if(box4.textContent == "X"){
+                                win("X");
                             }else{
                                 win("O");
                             }
@@ -71,7 +71,7 @@ and open the template in the editor.
                         if(box7.textContent == box8.textContent && box7.textContent == box9.textContent &&
                             box7.textContent != "|=|"){
                             document.body.style.backgroundColor = "Gold";
-                            if(box3.textContent == "X"){
+                            if(box7.textContent == "X"){
                                 win("X");
                             }else{
                                 win("O");
@@ -80,7 +80,7 @@ and open the template in the editor.
                         if(box1.textContent == box4.textContent && box1.textContent == box7.textContent &&
                             box1.textContent != "|=|"){
                             document.body.style.backgroundColor = "Gold";
-                            if(box3.textContent == "X"){
+                            if(box4.textContent == "X"){
                                 win("X");
                             }else{
                                 win("O");
@@ -89,7 +89,7 @@ and open the template in the editor.
                         if(box2.textContent == box5.textContent && box2.textContent == box8.textContent &&
                             box2.textContent != "|=|"){
                             document.body.style.backgroundColor = "Gold";
-                            if(box3.textContent == "X"){
+                            if(box2.textContent == "X"){
                                 win("X");
                             }else{
                                 win("O");
@@ -98,7 +98,7 @@ and open the template in the editor.
                         if(box3.textContent == box6.textContent && box3.textContent == box9.textContent &&
                             box3.textContent != "|=|"){
                             document.body.style.backgroundColor = "Gold";
-                            if(box3.textContent == "X"){
+                            if(box9.textContent == "X"){
                                 win("X");
                             }else{
                                 win("O");
@@ -107,7 +107,7 @@ and open the template in the editor.
                         if(box1.textContent == box5.textContent && box1.textContent == box9.textContent &&
                             box1.textContent != "|=|"){
                             document.body.style.backgroundColor = "Gold";
-                            if(box3.textContent == "X"){
+                            if(box5.textContent == "X"){
                                 win("X");
                             }else{
                                 win("O");
@@ -117,9 +117,9 @@ and open the template in the editor.
                             box3.textContent != "|=|"){
                             document.body.style.backgroundColor = "Gold";
                             if(box3.textContent == "X"){
-                             win("X");
+                                win("X");
                             }else{
-                            win("O");
+                                win("O");
                             }
                         }
                     }
