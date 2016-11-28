@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Create A Shopping List</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script>
+            function testHTML(){
+                var userInput = document.getElementById("inputText");
+                var span = document.getElementById("homespan");
+                var li = document.createElement("li");
+                li.textContent = userInput.value;
+                span.appendChild(li);
+                
+                //var thespan = document.getElementById("elspan");
+                //thespan.innerHTML = userInput.value;
+            }
+        </script>
+    </head>
+    <body id="javastyle">
+       <ul id="homespan"></ul>
+          <textarea rows="10" cols="80" id="inputText">
+           
+          </textarea>
+         <button onclick="testHTML();">Add</button>
+    </body>
+</html>
