@@ -46,7 +46,7 @@ and open the template in the editor.
                             table.appendChild(losetext);
                             //winstatement = true;
                         }
-                }
+                    }
                      function checkBoxes(box1, box2, box3, box4, box5, box6, box7, box8, box9){
                         if(box1.textContent == box2.textContent && box1.textContent == box3.textContent &&
                             box1.textContent != "|=|"){
@@ -56,7 +56,7 @@ and open the template in the editor.
                             }else{
                             win("O");
                             }
-                            }
+                        }
                         if(box4.textContent == box5.textContent && box4.textContent == box6.textContent &&
                             box4.textContent != "|=|"){
                             document.body.style.backgroundColor = "Gold";
@@ -75,53 +75,52 @@ and open the template in the editor.
                                 win("O");
                             }
                         }
-                     }
-                    if(box1.textContent == box4.textContent && box1.textContent == box7.textContent &&
-                        box1.textContent != "|=|"){
-                        document.body.style.backgroundColor = "Gold";
-                        if(box3.textContent == "X"){
+                        if(box1.textContent == box4.textContent && box1.textContent == box7.textContent &&
+                            box1.textContent != "|=|"){
+                            document.body.style.backgroundColor = "Gold";
+                            if(box3.textContent == "X"){
+                                win("X");
+                            }else{
+                                win("O");
+                            }
+                        }
+                        if(box2.textContent == box5.textContent && box2.textContent == box8.textContent &&
+                            box2.textContent != "|=|"){
+                            document.body.style.backgroundColor = "Gold";
+                            if(box3.textContent == "X"){
+                                win("X");
+                            }else{
+                                win("O");
+                            }
+                        }
+                        if(box3.textContent == box6.textContent && box3.textContent == box9.textContent &&
+                            box3.textContent != "|=|"){
+                            document.body.style.backgroundColor = "Gold";
+                            if(box3.textContent == "X"){
+                                win("X");
+                            }else{
+                                win("O");
+                            }
+                        }
+                        if(box1.textContent == box5.textContent && box1.textContent == box9.textContent &&
+                            box1.textContent != "|=|"){
+                            document.body.style.backgroundColor = "Gold";
+                            if(box3.textContent == "X"){
+                                win("X");
+                            }else{
+                                win("O");
+                            }
+                        }
+                        if(box3.textContent == box5.textContent && box3.textContent == box7.textContent &&
+                            box3.textContent != "|=|"){
+                            document.body.style.backgroundColor = "Gold";
+                            if(box3.textContent == "X"){
                              win("X");
-                        }else{
+                            }else{
                             win("O");
-                        }
-                        }
-                    if(box2.textContent == box5.textContent && box2.textContent == box8.textContent &&
-                        box2.textContent != "|=|"){
-                        document.body.style.backgroundColor = "Gold";
-                        if(box3.textContent == "X"){
-                             win("X");
-                        }else{
-                            win("O");
-                        }
-                        }
-                    if(box3.textContent == box6.textContent && box3.textContent == box9.textContent &&
-                        box3.textContent != "|=|"){
-                        document.body.style.backgroundColor = "Gold";
-                        if(box3.textContent == "X"){
-                             win("X");
-                        }else{
-                            win("O");
+                            }
                         }
                     }
-                    if(box1.textContent == box5.textContent && box1.textContent == box9.textContent &&
-                        box1.textContent != "|=|"){
-                        document.body.style.backgroundColor = "Gold";
-                        if(box3.textContent == "X"){
-                             win("X");
-                        }else{
-                            win("O");
-                        }
-                        }
-                    if(box3.textContent == box5.textContent && box3.textContent == box7.textContent &&
-                        box3.textContent != "|=|"){
-                        document.body.style.backgroundColor = "Gold";
-                        if(box3.textContent == "X"){
-                             win("X");
-                        }else{
-                            win("O");
-                        }
-                    }
-                }
                 function checkWinner(){ 
                     var box1 = document.getElementById("1");
                     var box2 = document.getElementById("2");
