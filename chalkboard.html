@@ -8,6 +8,10 @@
         <script>
             function testHTML(){
                 var userInput = document.getElementById("inputText");
+                function removetxt(){
+                    remove(userInput.textContent);
+                }
+                
                 var span = document.getElementById("homespan");
                 for(var i = 0; i < 100; i++){
                     var li = document.createElement("li");
@@ -23,8 +27,8 @@
     </head>
     <body id="javastyle">
        <ol id="homespan"></ol>
-          <textarea rows="10" cols="80" id="inputText">
-           
+          <textarea onclick="removetxt();" rows="10" cols="80" id="inputText">
+           I will not...
           </textarea>
          <button onclick="testHTML();">Add</button>
     </body>
