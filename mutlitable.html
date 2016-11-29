@@ -19,14 +19,14 @@
                 var timesTable = document.createElement("table");
                 timesTable.id = "timesTable";
                 for(var i = 0; i < 11; i++){
-                    var tr = timesTable.createElement("tr");
-                    tr.textContent = i;
+                    var tr = timesTable.createElement("tr"); 
                     timesTable.appendChild(tr);
+                    tr.textContent = i;
                     //tr.id = "trow" + o;
                     for(var o = o; o < 11; o++){
                         var td = tr.createElement("td");
-                        td.textcontent = o;
                         timesTable.appendChild(td);
+                        td.textcontent = o;
                         //td.id = i + o
                     }
                 }
