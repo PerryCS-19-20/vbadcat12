@@ -11,7 +11,9 @@
                 var span = document.getElementById("homespan");
                 var li = document.createElement("li");
                 li.textContent = userInput.value;
-                span.appendChild(li);
+                for(var i = 0; i < 100; i++){
+                    span.appendChild(li);
+                }
                 
                 //var thespan = document.getElementById("elspan");
                 //thespan.innerHTML = userInput.value;
