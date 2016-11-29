@@ -23,10 +23,43 @@
                 for(var i = 0; i < 11; i++){
                     var tr = document.createElement("tr"); 
                     timesTable.appendChild(tr);
-                    tr.id = i;
-                    for(var o = o; o < 11; o++){
+                    
+                    for(var o = 0; o < 11; o++){
                         var td = document.createElement("td");
-                        td.textcontent = o;
+                            if(i = 0){
+                                td.textContent = o;
+                            }
+                            if(i = 1){
+                                td.textContent = o + 1 * o;
+                            }
+                            if(i = 2){
+                                td.textContent = o + 2;
+                            }
+                            if(i = 3){
+                                td.textContent = o + 1;
+                            }
+                            if(i = 1){
+                                td.textContent = o + 1;
+                            }
+                            if(i = 1){
+                                td.textContent = o + 1;
+                            }
+                            if(i = 1){
+                                td.textContent = o + 1;
+                            }
+                            if(i = 1){
+                                td.textContent = o + 1;
+                            }
+                            if(i = 1){
+                                td.textContent = o + 1;
+                            }
+                            if(i = 1){
+                                td.textContent = o + 1;
+                            }
+                            if(i = 11){
+                                td.textContent = o + 10;
+                            }
+                            td.textContent = o;
                         tr.appendChild(td);
                     }
                 }
