@@ -20,10 +20,12 @@
                 timesTable.id = "timesTable";
                 for(var i = 0; i < 11; i++){
                     var tr = timesTable.createElement("tr");
+                    tr.textContent = i;
                     timesTable.appendChild(tr);
                     //tr.id = "trow" + o;
                     for(var o = o; o < 11; o++){
                         var td = tr.createElement("td");
+                        td.textcontent = o;
                         timesTable.appendChild(td);
                         //td.id = i + o
                     }
