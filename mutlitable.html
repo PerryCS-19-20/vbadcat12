@@ -19,12 +19,19 @@
                 var timesTable = document.createElement("table");
                 timesTable.id = "timesTable";
                 for(var i = 0; i < 11; i++){
-                    var column = timesTable.createElement("tr");
-                    column.id = "column";
-                for(var o = 0; o < 11; o++){
-                    var row = column.createElement("td");
-                    //row.id = "cell";
+                    var tr = timeTable.createElement("tr");
+                    tr.id = "trow" + o;
+                    for(var o = o; o < 11; o++){
+                        var td = trow.createElement("td");
+                        //td.id = i + o
                     }
+                    
+                    //var column = timesTable.createElement("tr");
+                    //column.id = "column";
+               // for(var o = 0; o < 11; o++){
+                    //var row = column.createElement("td");
+                    //row.id = "cell";
+                    //}
                     
                 }
                 // Add the table to the document's body
