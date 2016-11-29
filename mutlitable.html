@@ -21,10 +21,11 @@
                 for(var i = 0; i < 11; i++){
                     var tr = document.createElement("tr"); 
                     timesTable.appendChild(tr);
+                    tr.id = i;
                     for(var o = o; o < 11; o++){
                         var td = document.createElement("td");
                         td.textcontent = o;
-                        timesTable.tr.appendChild(td);
+                        i.appendChild(td);
                     }
                 }
                 // Add the table to the document's body
