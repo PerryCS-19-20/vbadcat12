@@ -27,16 +27,16 @@
                     
                     for(var o = 0; o < 11; o++){
                         var td = document.createElement("td");
-                            if(i == 0){
+                            if(i == 1){
                                 td.textContent = 17;
                             }else{ 
                                 td.textContent = i * o;
                             }
                             if(o == 0){
                                 td.textContent = i;
-                            }else{ 
-                                td.textContent = i * o;
-                            }
+                            }//else{ 
+                                //td.textContent = i * o;
+                            //}
                         tr.appendChild(td);
                     }
                 }
