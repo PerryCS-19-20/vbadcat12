@@ -27,24 +27,19 @@
                     
                     for(var o = 0; o < 11; o++){
                         var td = document.createElement("td");
-                            if(i == 1){
-                                td.textContent = 17;
+                            if(i == 0){
+                                td.textContent = o;
                             }else{ 
                                 td.textContent = i * o;
                             }
                             if(o == 0){
                                 td.textContent = i;
-                            }//else{ 
-                                //td.textContent = i * o;
-                            //}
+                            }
                         tr.appendChild(td);
                     }
                 }
-                // Add the table to the document's body
                 var body = document.body;
                 body.appendChild(timesTable);
-                
-                // Fill in the multiplication table
             }
         </script>
     </body>
