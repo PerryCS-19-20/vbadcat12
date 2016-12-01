@@ -17,10 +17,11 @@
     </head>
     <body onload="buildTimesTable()">
         <script>
+            var i;
             function buildTimesTable() {
                 var timesTable = document.createElement("table");
                 timesTable.id = "timesTable";
-                for(var i = 0; i < 11; i++){
+                for(i = 0; i < 11; i++){
                     var tr = document.createElement("tr"); 
                     timesTable.appendChild(tr);
                     
