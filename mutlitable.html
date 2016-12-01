@@ -28,9 +28,14 @@
                     for(var o = 0; o < 11; o++){
                         var td = document.createElement("td");
                             if(i == 0){
-                                td.textContent = "1";
+                                td.textContent = o;
                             }else{ 
-                                td.textContent = "2";
+                                td.textContent = i * o + 1;
+                            }
+                            if(o == 0){
+                                td.textContent = i;
+                            }else{ 
+                                td.textContent = i * o + 1;
                             }
                         tr.appendChild(td);
                     }
