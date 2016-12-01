@@ -31,6 +31,9 @@
     color: White;
    text-align: center;
 }
+a {
+    color: chartreuse;
+}
 #javastyle {
     background-Color: Black;
     color: chartreuse;
