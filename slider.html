@@ -26,7 +26,8 @@
             function buildTimesTable() {
                 var timesTable = document.getElementById("timesTable");
                 if (timesTable != null) {
-                    timesTable.parentNode.removeChild(timesTable);        
+                    timesTable.parentNode.removeChild(timesTable);
+                    buildTimesTable();
                 }else{
                     timesTable = document.createElement("table");
                     timesTable.id = "timesTable";            
