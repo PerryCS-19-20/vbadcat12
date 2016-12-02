@@ -27,23 +27,19 @@
                 var timesTable = document.getElementById("timesTable");
                 if (timesTable != null) {
                     timesTable.parentNode.removeChild(timesTable);        
-                }
-                timesTable = document.createElement("table");
-                timesTable.id = "timesTable";            
-                var i;
-                function buildTimesTable() {
-                    var timesTable = document.createElement("table");
-                    timesTable.id = "timesTable";
+                }else{
+                    timesTable = document.createElement("table");
+                    timesTable.id = "timesTable";            
+                     var i;
                     for(i = 0; i < 11; i++){
                         var tr = document.createElement("tr"); 
                         timesTable.appendChild(tr);
-                    
                         for(var o = 0; o < 11; o++){
                             var td = document.createElement("td");
                                 if(i == 0){
-                                td.textContent = o;
+                                    td.textContent = o;
                                 }else{ 
-                                td.textContent = i * o;
+                                    td.textContent = i * o;
                                 }
                                 if(o == 0){
                                     td.textContent = i;
@@ -54,10 +50,9 @@
                     var body = document.body;
                     body.appendChild(timesTable);
                 }
+            }
                 var width = document.getElementById("tableWidth").value;
                 var height = document.getElementById("tableHeight").value;
-
-            }
         </script>
     </body>
 </html>
