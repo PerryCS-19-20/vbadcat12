@@ -23,16 +23,15 @@
         Table Height:<input type="range" id="tableWidth" min="1" max="20" value="10" onchange ="buildTimesTable();"><br>
         
         <script>
-            function buildTimesTable() {
+            function buildTimesTable(num) {
                 var timesTable = document.getElementById("timesTable");
                 if (timesTable != null) {
                     timesTable.parentNode.removeChild(timesTable);
-                    buildTimesTable();
+                    buildTimesTable(num);
                 }else{
                     timesTable = document.createElement("table");
-                    timesTable.id = "timesTable";            
-                     var i;
-                    for(i = 0; i < 11; i++){
+                    timesTable.id = "timesTable";
+                    for(var i = 0; i < 11; i++){
                         var tr = document.createElement("tr"); 
                         timesTable.appendChild(tr);
                         for(var o = 0; o < 11; o++){
@@ -51,9 +50,9 @@
                     var body = document.body;
                     body.appendChild(timesTable);
                 }
-            }
                 var width = document.getElementById("tableWidth").value;
                 var height = document.getElementById("tableHeight").value;
+            }
         </script>
     </body>
 </html>
