@@ -30,7 +30,7 @@
                 var timesTable = document.getElementById("timesTable");
                 if (timesTable != null) {
                     timesTable.parentNode.removeChild(timesTable);
-                    //buildTimesTable();
+                    buildTimesTable(tw, th);
                 }else{
                     timesTable = document.createElement("table");
                     timesTable.id = "timesTable";
