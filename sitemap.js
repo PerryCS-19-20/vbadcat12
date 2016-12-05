@@ -1,5 +1,5 @@
 function buildMap(id){
-    var div = document.getElement(id);
+    var div = document.getElementById(id);
     var ul = document.createElement("ul");
     div.appendChild(ul);
     var li = document.createElement("li");
