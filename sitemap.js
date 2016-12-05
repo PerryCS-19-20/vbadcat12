@@ -4,7 +4,7 @@ function buildMap(id){
     div.appendChild(ul);
     var li = document.createElement("li");
     for(var s = 0; s < 11; i++){
-        li.textContent = "home page";
+        li.textContent = "home page" + s;
         div.appendChild(li);
     }
     
