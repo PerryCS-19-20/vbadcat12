@@ -19,25 +19,25 @@
 
 
         <h1>Multiplication Table</h1>
-        Table Width:<input type="range" id="tableWidth" min="1" max="20" value="10" onchange ="buildTimesTable(tableWidth, tableHeight);"><br>
-        Table Height:<input type="range" id="tableHeight" min="1" max="20" value="10" onchange ="buildTimesTable(tableWidth, tableHeight);"><br>
+        Table Width:<input type="range" id="tableWidth" min="1" max="20" value="10" onchange ="buildTimesTable();"><br>
+        Table Height:<input type="range" id="tableHeight" min="1" max="20" value="10" onchange ="buildTimesTable();"><br>
         
         <script>                
-            var width = document.getElementById("tableWidth").value;
-            var height = document.getElementById("tableHeight").value;
             
-            function buildTimesTable(tw, th) {
+            
+            function buildTimesTable() {
+                
                 var timesTable = document.getElementById("timesTable");
                 if (timesTable != null) {
                     timesTable.parentNode.removeChild(timesTable);
-                    buildTimesTable(tw, th);
+                    buildTimesTable();
                 }else{
                     timesTable = document.createElement("table");
                     timesTable.id = "timesTable";
-                    for(var i = 0; i < th; i++){
+                    for(var i = 0; i < tableHeight; i++){
                         var tr = document.createElement("tr"); 
                         timesTable.appendChild(tr);
-                        for(var o = 0; o < tw; o++){
+                        for(var o = 0; o < tableWidth; o++){
                             var td = document.createElement("td");
                                 if(i == 0){
                                     td.textContent = o;
@@ -50,10 +50,12 @@
                             tr.appendChild(td);
                         }
                     }
+                    
                     var body = document.body;
                     body.appendChild(timesTable);
                 }
-
+                var width = document.getElementById("tableWidth").value;
+                var height = document.getElementById("tableHeight").value;
             }
         </script>
     </body>
