@@ -19,13 +19,13 @@
 
 
         <h1>Multiplication Table</h1>
-        Table Width:<input type="range" id="tableWidth" min="1" max="20" value="10" onchange ="buildTimesTable();"><br>
-        Table Height:<input type="range" id="tableHeight" min="1" max="20" value="10" onchange ="buildTimesTable();"><br>
+        Table Width:<input type="range" id="tableWidth" min="1" max="20" value="10" onchange ="buildTimesTable(tableWidth, tableHeight);"><br>
+        Table Height:<input type="range" id="tableHeight" min="1" max="20" value="10" onchange ="buildTimesTable(tableWidth, tableHeight);"><br>
         
         <script>                
             
             
-            function buildTimesTable() {
+            function buildTimesTable(tw, th) {
                 
                 var timesTable = document.getElementById("timesTable");
                 if (timesTable != null) {
@@ -34,10 +34,10 @@
                 }else{
                     timesTable = document.createElement("table");
                     timesTable.id = "timesTable";
-                    for(var i = 0; i < tableHeight; i++){
+                    for(var i = 0; i < th; i++){
                         var tr = document.createElement("tr"); 
                         timesTable.appendChild(tr);
-                        for(var o = 0; o < tableWidth; o++){
+                        for(var o = 0; o < tw; o++){
                             var td = document.createElement("td");
                                 if(i == 0){
                                     td.textContent = o;
