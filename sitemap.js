@@ -3,6 +3,9 @@ function buildMap(id){
     var ul = document.createElement("ul");
     div.appendChild(ul);
     var li = document.createElement("li");
-    li.textContent = "home page";
-    div.appendChild(li);
+    for(var i = 0; i < 11; i++){
+        li.textContent = "home page";
+        div.appendChild(li);
+    }
+    
 }
