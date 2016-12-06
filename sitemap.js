@@ -2,7 +2,7 @@ function buildMap(id){
     var div = document.getElementById(id);
     var ul = document.createElement("ul");
     div.appendChild(ul);
-    for(var s = 0; s <= 11; s++){
+    for(var s = 0; s <= 12; s++){
         var aTag = document.createElement("a");
         var li = document.createElement("li");
         if(s == 0){
@@ -52,6 +52,10 @@ function buildMap(id){
         if(s == 11){
             li.textContent = "Mulitplication Table With Slider";
             aTag.setAttribute('href',"slider.html");
+        }
+        if(s == 12){
+            li.textContent = "Midpoint Calculator";
+            aTag.setAttribute('href',"calulator.html");
         }
         aTag.appendChild(li);
         div.appendChild(aTag);
