@@ -55,7 +55,7 @@ function buildMap(id){
         }
         if(s == 12){
             li.textContent = "Midpoint Calculator";
-            aTag.setAttribute('href',"calulator.html");
+            aTag.setAttribute('href',"calculator.html");
         }
         aTag.appendChild(li);
         div.appendChild(aTag);
