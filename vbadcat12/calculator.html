@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Midpoint Calculator</title>
+        <script>
+            function calc() {
+                var list = document.getElementById("list");
+                var ponex = document.getElementById("ponex").value;
+                var poney = document.getElementById("poney").value;
+                var ptwox = document.getElementById("ptwox").value;
+                var ptwoy = document.getElementById("ptwoy").value;
+                var mpx = (ponex - poney)/2;
+                var mpy = (ptwox - ptwoy)/2;
+                var mp = mpx + " , " + mpy;
+                var li = document.createElement("li");
+                li.textContent = mp;
+                list.appendChild(li);
+            }
+        </script>
+        
+        <style>
+            input[type=number] {
+                width: 64px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Finding the Midpoint:</h1>
+        Point 1(x) <input type="number" id="ponex"><br>
+        Point 1(y) <input type="number" id="poney"><br>
+        Point 2(x) <input type="number" id="ptwox"><br>
+        Point 2(y) <input type="number" id="ptwoy"><br>
+        <button onclick="calc()">Calculate</button>
+        <ul id="list"></ul>
+    </body>
+</html>
