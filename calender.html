@@ -8,10 +8,10 @@
             function makeCalendar() {
                 var calender = document.createElement("table");
                 calender.id = "calender";
-                for(var i = 0; i < width; i++){
+                for(var i = 0; i <= 6; i++){
                     var tr = document.createElement("tr"); 
                     calender.appendChild(tr);
-                    for(var o = 0; o < height; o++){
+                    for(var o = 0; o <= 7; o++){
                         var td = document.createElement("td");
                             if(i == 0){
                                     td.textContent = o;
