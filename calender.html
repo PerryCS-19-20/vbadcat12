@@ -6,33 +6,27 @@
         <title>Calendar</title>
         <script>
             function makeCalendar() {
-                if (calender != null) {
-                    calender.parentNode.removeChild(calender);
-                    makeCalender();
-                }else{
-                    calender = document.createElement("table");
-                    calender.id = "calender";
-                    for(var i = 0; i < width; i++){
-                        var tr = document.createElement("tr"); 
-                        calender.appendChild(tr);
-                        for(var o = 0; o < height; o++){
-                            var td = document.createElement("td");
-                                if(i == 0){
+                var calender = document.createElement("table");
+                calender.id = "calender";
+                for(var i = 0; i < width; i++){
+                    var tr = document.createElement("tr"); 
+                    calender.appendChild(tr);
+                    for(var o = 0; o < height; o++){
+                        var td = document.createElement("td");
+                            if(i == 0){
                                     td.textContent = o;
-                                }else{ 
+                            }else{ 
                                     td.textContent = i * o;
-                                }
-                                if(o == 0){
-                                    td.textContent = i;
-                                }
-                            tr.appendChild(td);
-                        }
+                            }
+                            if(o == 0){
+                                td.textContent = i;
+                             }
+                        tr.appendChild(td);
                     }
-                    
-                    var body = calender.body;
-                    body.appendChild(calender);
-                }
+                var body = calender.body;
+                ody.appendChild(calender);
             }
+        }
         </script>
     </head>
     <body onload="makeCalendar();">
