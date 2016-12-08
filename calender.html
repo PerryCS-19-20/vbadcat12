@@ -6,11 +6,11 @@
         <title>Calendar</title>
         <script>
             function makeCalendar() {
-                var calender = document.createElement("table");
-                calender.id = "calender";
+                var calendar = document.createElement("table");
+                calendar.id = "calender";
                 for(var i = 0; i <= 6; i++){
                     var tr = document.createElement("tr"); 
-                    calender.appendChild(tr);
+                    calendar.appendChild(tr);
                     for(var o = 0; o <= 7; o++){
                         var td = document.createElement("td");
                             if(i == 0){
@@ -20,8 +20,8 @@
                             }
                         tr.appendChild(td);
                     }
-                var body = calender.body;
-                ody.appendChild(calender);
+                var body = calendar.body;
+                body.appendChild(calendar);
             }
         }
         </script>
