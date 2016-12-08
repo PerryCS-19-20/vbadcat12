@@ -6,22 +6,27 @@
         <title>Calendar</title>
         <script>
             function makeCalendar() {
-                var table = document.createElement("table");
+                var calender = document.createElement("table");
                 for(var i = 0; i <= 5; i++){
                     if(i == 0){
                         var th = document.createElement("th");
+                        calender.appendChild(th);
                     }else{
-                        var tr = document.createelement("tr");
+                        var tr = document.createElement("tr");
+                        calender.appendChild(tr);
                     }
                     for(var o = 0; o <= 7; o++){
                         var td = document.createElement("td");
                         if(i == 0){
                             td.textContent = "dayofweek";
+                            th.appendChild(td);
                         }else{
                             td.textContent = "1";
+                            tr.appendChild(td);
                         }
                     }
                 }
+                document.appendChild(calender);
             }
         </script>
     </head>
