@@ -6,28 +6,32 @@
         <title>Calendar</title>
         <script>
             function makeCalendar() {
-                var calender = document.createElement("table");
-                calender.id = "calender";
-                for(var i = 0; i <= 5; i++){
-                    if(i == 0){
-                        var th = document.createElement("th");
-                        calender.appendChild(th);
-                    }else{
-                        var tr = document.createElement("tr");
+                if (calender != null) {
+                    calender.parentNode.removeChild(calender);
+                    makeCalender();
+                }else{
+                    calender = document.createElement("table");
+                    calender.id = "calender";
+                    for(var i = 0; i < width; i++){
+                        var tr = document.createElement("tr"); 
                         calender.appendChild(tr);
-                    }
-                    for(var o = 0; o <= 7; o++){
-                        var td = document.createElement("td");
-                        if(i == 0){
-                            td.textContent = "dayofweek";
-                            th.appendChild(td);
-                        }else{
-                            td.textContent = "1";
+                        for(var o = 0; o < height; o++){
+                            var td = document.createElement("td");
+                                if(i == 0){
+                                    td.textContent = o;
+                                }else{ 
+                                    td.textContent = i * o;
+                                }
+                                if(o == 0){
+                                    td.textContent = i;
+                                }
                             tr.appendChild(td);
                         }
                     }
+                    
+                    var body = calender.body;
+                    body.appendChild(calender);
                 }
-                document.appendChild(calender);
             }
         </script>
     </head>
