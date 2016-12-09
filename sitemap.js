@@ -2,7 +2,7 @@ function buildMap(id){
     var div = document.getElementById(id);
     var ul = document.createElement("ul");
     div.appendChild(ul);
-    for(var s = 0; s <= 12; s++){
+    for(var s = 0; s <= 13; s++){
         var aTag = document.createElement("a");
         var li = document.createElement("li");
         if(s == 0){
@@ -56,6 +56,10 @@ function buildMap(id){
         if(s == 12){
             li.textContent = "Midpoint Calculator";
             aTag.setAttribute('href',"calculator.html");
+        }
+        if(s == 13){
+            li.textContent = "Calender In Work";
+            aTag.setAttribute('href',"calendar.html");
         }
         aTag.appendChild(li);
         div.appendChild(aTag);

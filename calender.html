@@ -20,6 +20,7 @@
                     var year = today.getFullYear();
                     for(var o = 0; o < 7; o++){
                         var td = document.createElement("td");
+                        var endDay = getNumDays(month, year);
                         td.id = "wubbu";
                             if(i == 0){
                                 var day = getDayName(o);
@@ -36,7 +37,7 @@
                                     }
                                     
                                 }
-                            }
+                               
                         tr.appendChild(td);
                     }
                 var body = document.body;
