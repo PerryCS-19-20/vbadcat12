@@ -51,3 +51,6 @@ a {
     background-color: black;
     text-align: center;
 }
+#calendar, #wubbu {
+    border: 2px;
+}

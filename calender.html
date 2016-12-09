@@ -4,29 +4,37 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
         <title>Calendar</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
         <script>
             function makeCalendar() {
                 var calendar = document.createElement("table");
                 calendar.id = "calender";
-                var num = 1;
+                var num = 2;
+                var passed = false;
                 for(var i = 0; i <= 6; i++){
-                    var tr = document.createElement("tr"); 
+                    var tr = document.createElement("tr");
+                    tr.id = "wubbu";
                     calendar.appendChild(tr);
+                    var today = new Date();
+                    var month = today.getMonth();
+                    var year = today.getFullYear();
                     for(var o = 0; o < 7; o++){
                         var td = document.createElement("td");
-                        
+                        td.id = "wubbu";
                             if(i == 0){
                                 var day = getDayName(o);
                                 td.textContent = day;
                             }else{ 
-                                
-                                if(o == 4 && i == 1){
+                                var fd = getFirstDay(month, year);
+                                if(o == fd && i == 1){
                                     td.textContent = "1";
-                                    num++;
-                                }
-                                if(i != 0 && o != 4 && o != 0 &&.....){
-                                    td.textContent = num;
-                                    num++;
+                                    passed = true;
+                                }else{
+                                    if(i > 0 && o > fd || i > 1){
+                                        td.textContent = num;
+                                        num++;
+                                    }
+                                    
                                 }
                             }
                         tr.appendChild(td);
@@ -35,6 +43,11 @@
                 body.appendChild(calendar);
             }
         }
+        function getFirstDay(month, year){
+            var date = new Date(year, month, 1);
+            return date.getDay();
+        }
+
         function getDayName(dayNum){
             switch(dayNum) {
                 case 0:
