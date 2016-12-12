@@ -59,7 +59,7 @@ function buildMap(id){
         }
         if(s == 13){
             li.textContent = "Calender In Work";
-            aTag.setAttribute('href',"calendar.html");
+            aTag.setAttribute('href',"calender.html");
         }
         aTag.appendChild(li);
         div.appendChild(aTag);
