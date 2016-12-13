@@ -5,22 +5,19 @@
         <meta name="viewport" content="width=device-width">
         <title>Calendar</title>
         <script>
-           
-            var today = new Date();
-            var month = today.getMonth();
-            var year = today.getFullYear();
             var z = 0;
-            
+            var today = new Date();
+            var year = today.getFullYear();
+            var num = 2;
             function makeCalendar() {
+                var month = today.getMonth() + z;
                 var hone = document.createElement("h1");
-                var mn = getMonthName(month, z);
+                var mn = getMonthName(month);
                 hone.textContent = mn;
                 hone.id = "hone";
                 document.body.appendChild(hone);
                 var calendar = document.createElement("table");
                 calendar.id = "calender";
-                var num = 2;
-                var passed = false;
                 for(var i = 0; i <= 5; i++){
                     var tr = document.createElement("tr");
                     calendar.appendChild(tr);
@@ -80,8 +77,8 @@
                 var date = new Date(year, month+1, 0);
                 return date.getDate();
         }
-        function getMonthName(month, z) {
-                switch(month + z) {
+        function getMonthName(month) {
+                switch(month) {
                 case 0:
                     return "January";
                 case 1:
@@ -111,10 +108,12 @@
     function nextMonth(){
         z++;
         makeCalendar();
+        num = 2;
     }
     function prevMonth(){
         z--;
         makeCalendar();
+        num = 2;
     }
         </script>
     </head>
