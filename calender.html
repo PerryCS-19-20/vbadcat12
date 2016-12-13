@@ -6,7 +6,19 @@
         <title>Calendar</title>
         
         <script>
-            function makeCalendar() {
+            var today = new Date();
+            var month = today.getMonth();
+            var year = today.getFullYear();
+            var aos = 0;
+            function nextMonth(){
+                month + 1;
+                makeCalendar(aos);
+            }
+            function prevMonth(){
+               month - 1;
+               makeCalendar(aos);
+            }
+            function makeCalendar(aos) {
                 var today = new Date();
                 var month = today.getMonth();
                 var year = today.getFullYear();
@@ -19,7 +31,7 @@
                 calendar.id = "calender";
                 var num = 2;
                 var passed = false;
-                for(var i = 0; i <= 6; i++){
+                for(var i = 0; i <= 5; i++){
                     var tr = document.createElement("tr");
                     calendar.appendChild(tr);
                     
@@ -106,8 +118,11 @@
                     return "December";
                 }
       }
+      
         </script>
     </head>
     <body onload="makeCalendar();">
+        <button onclick="prevMonth;">Back</button>
+        <button onclick="nextMonth;">Next</button>
     </body>
 </html>
