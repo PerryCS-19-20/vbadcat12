@@ -10,45 +10,51 @@
             var year = today.getFullYear();
             var num = 2;
             function makeCalendar() {
-                var month = today.getMonth() + z;
-                var hone = document.createElement("h1");
-                var mn = getMonthName(month);
-                hone.textContent = mn;
-                hone.id = "hone";
-                document.body.appendChild(hone);
-                var calendar = document.createElement("table");
-                calendar.id = "calender";
-                for(var i = 0; i <= 5; i++){
-                    var tr = document.createElement("tr");
-                    calendar.appendChild(tr);
+                var calender = document.getElementById("calender");
+                if(calender != null){
+                    calender.parentNode.removeChild(calender);
+                    makeCalendar();
+                }else{
+                    var month = today.getMonth() + z;
+                    var hone = document.createElement("h1");
+                     var mn = getMonthName(month);
+                    hone.textContent = mn;
+                    hone.id = "hone";
+                    document.body.appendChild(hone);
+                    var calendar = document.createElement("table");
+                    calendar.id = "calender";
+                    for(var i = 0; i <= 5; i++){
+                        var tr = document.createElement("tr");
+                        calendar.appendChild(tr);
                     
-                    for(var o = 0; o < 7; o++){
-                        var td = document.createElement("td");
-                        if(i == 0){
-                            var day = getDayName(o);
-                            td.textContent = day;
-                        }else{ 
-                            var fd = getFirstDay(month, year);
-                            if(o == fd && i == 1){
-                                td.textContent = "1";
-                                passed = true;
-                            }else{
-                                var ed = getNumDays(month, year);
-                                if(i > 0 && o > fd || i > 1){
-                                   td.textContent = num;
-                                    num++;
+                        for(var o = 0; o < 7; o++){
+                            var td = document.createElement("td");
+                            if(i == 0){
+                                var day = getDayName(o);
+                                td.textContent = day;
+                            }else{ 
+                                var fd = getFirstDay(month, year);
+                                if(o == fd && i == 1){
+                                    td.textContent = "1";
+                                    passed = true;
                                 }else{
-                                    if(num >= ed){
-                                        td.textContent = " ";
+                                    var ed = getNumDays(month, year);
+                                    if(i > 0 && o > fd || i > 1){
+                                    td.textContent = num;
+                                        num++;
+                                    }else{
+                                        if(num >= ed){
+                                            td.textContent = " ";
+                                        }
                                     }
                                 }
                             }
-                        }
-                        tr.appendChild(td);
-                        var body = document.body;
-                       body.appendChild(calendar);
-                }
-            }   
+                            tr.appendChild(td);
+                            var body = document.body;
+                        body.appendChild(calendar);
+                    }
+                }   
+            }
         }
         function getFirstDay(month, year){
             var date = new Date(year, month, 1);
