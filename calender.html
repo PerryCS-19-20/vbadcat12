@@ -9,22 +9,22 @@
             var today = new Date();
             var month = today.getMonth();
             var year = today.getFullYear();
-            var aos = 0;
+            var difmonth = 0;
             function nextMonth(){
                 month + 1;
-                makeCalendar(aos);
+                makeCalendar(difmonth);
             }
             function prevMonth(){
                month - 1;
-               makeCalendar(aos);
+               makeCalendar(difmonth);
             }
-            function makeCalendar(aos) {
+            function makeCalendar() {
                 var today = new Date();
                 var month = today.getMonth();
                 var year = today.getFullYear();
                 var hone = document.createElement("h1");
                 var mn = getMonthName(month);
-                hone.textContent = mn; //the function s not working, fix it!!!
+                hone.textContent = mn;
                 hone.id = "hone";
                 document.body.appendChild(hone);
                 var calendar = document.createElement("table");
@@ -122,7 +122,7 @@
         </script>
     </head>
     <body onload="makeCalendar();">
-        <button onclick="prevMonth;">Back</button>
-        <button onclick="nextMonth;">Next</button>
+        <button id="bbutton" onclick="prevMonth;">Back</button>
+        <button id="fbutton" onclick="nextMonth;">Next</button>
     </body>
 </html>
