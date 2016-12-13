@@ -10,9 +10,9 @@
             var year = today.getFullYear();
             var num = 2;
             function makeCalendar() {
-                var calender = document.getElementById("calender");
-                if(calender != null){
-                    calender.parentNode.removeChild(calender);
+                var calendar = document.getElementById("calendar");
+                if(calendar != null){
+                    document.removeChild(calendar);
                     makeCalendar();
                 }else{
                     var month = today.getMonth() + z;
@@ -22,7 +22,7 @@
                     hone.id = "hone";
                     document.body.appendChild(hone);
                     var calendar = document.createElement("table");
-                    calendar.id = "calender";
+                    calendar.id = "calendar";
                     for(var i = 0; i <= 5; i++){
                         var tr = document.createElement("tr");
                         calendar.appendChild(tr);
@@ -112,14 +112,14 @@
                 }
       }
     function nextMonth(){
-        z++;
-        makeCalendar();
+        z = -5;
         num = 2;
+        makeCalendar();
     }
     function prevMonth(){
-        z--;
-        makeCalendar();
+        z = -5;
         num = 2;
+        makeCalendar();
     }
         </script>
     </head>
