@@ -39,7 +39,7 @@ a {
     color: chartreuse;
     text-align: center;
 }
-.tr {
+.tr, table, td {
     width: 100px;
     Height: 100px;
     border: 15px;
@@ -50,7 +50,4 @@ a {
 #sitemapbody {
     background-color: black;
     text-align: center;
-}
-#calendar, #wubbu {
-    border: 2px;
 }

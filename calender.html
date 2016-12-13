@@ -4,26 +4,16 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
         <title>Calendar</title>
-        
         <script>
+           
             var today = new Date();
             var month = today.getMonth();
             var year = today.getFullYear();
-            var difmonth = 0;
-            function nextMonth(){
-                month + 1;
-                makeCalendar(difmonth);
-            }
-            function prevMonth(){
-               month - 1;
-               makeCalendar(difmonth);
-            }
+            var z = 0;
+            
             function makeCalendar() {
-                var today = new Date();
-                var month = today.getMonth();
-                var year = today.getFullYear();
                 var hone = document.createElement("h1");
-                var mn = getMonthName(month);
+                var mn = getMonthName(month, z);
                 hone.textContent = mn;
                 hone.id = "hone";
                 document.body.appendChild(hone);
@@ -90,8 +80,8 @@
                 var date = new Date(year, month+1, 0);
                 return date.getDate();
         }
-        function getMonthName(month) {
-                switch(month) {
+        function getMonthName(month, z) {
+                switch(month + z) {
                 case 0:
                     return "January";
                 case 1:
@@ -118,7 +108,14 @@
                     return "December";
                 }
       }
-      
+    function nextMonth(){
+        z++;
+        makeCalendar();
+    }
+    function prevMonth(){
+        z--;
+        makeCalendar();
+    }
         </script>
     </head>
     <body onload="makeCalendar();">
