@@ -6,10 +6,12 @@
         <title>Calendar</title>
         <script>
             var z = 0;
+            var ysub = 0;
             var today = new Date();
-            var year = today.getFullYear();
+            
             var num = 2;
             function makeCalendar() {
+                var year = today.getFullYear() + ysub;
                 var calendar = document.getElementById("calendar");
                 var htag = document.getElementById("hone");
                 if(calendar != null){
@@ -20,7 +22,7 @@
                     var month = today.getMonth() + z;
                     var hone = document.createElement("h1");
                      var mn = getMonthName(month);
-                    hone.textContent = mn;
+                    hone.textContent = mn + " " + year;
                     hone.id = "hone";
                     document.body.appendChild(hone);
                     var calendar = document.createElement("table");
@@ -123,10 +125,22 @@
         num = 2;
         makeCalendar();
     }
+    function prevYr(){
+        ysub = ysub-1;
+        num = 2;
+        makeCalendar();
+    }
+    function nextYr(){
+        ysub = ysub+1;
+        num = 2;
+        makeCalendar();
+    }
         </script>
     </head>
     <body onload="makeCalendar();">
-        <button id="bbutton" onclick ="prevMonth();">Back</button>
-        <button id="fbutton" onclick ="nextMonth();">Next</button>
+        <button id="ybbutton" onclick ="prevYr();">Prev Year</button>
+        <button id="mbbutton" onclick ="prevMonth();">Prev Month</button>
+        <button id="mfbutton" onclick ="nextMonth();">Next Month</button>
+        <button id="yfbutton" onclick ="nextYr();">Next year</button>
     </body>
 </html>
