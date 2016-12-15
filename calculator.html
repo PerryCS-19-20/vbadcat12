@@ -7,12 +7,12 @@
         <script>
             function calc() {
                 var list = document.getElementById("list");
-                var ponex = document.getElementById("ponex").value;
-                var poney = document.getElementById("poney").value;
-                var ptwox = document.getElementById("ptwox").value;
-                var ptwoy = document.getElementById("ptwoy").value;
-                var mpx = (ponex - poney)/2;
-                var mpy = (ptwox - ptwoy)/2;
+                var ponex = parseFloat(document.getElementById("ponex").value);
+                var poney = parseFloat(document.getElementById("poney").value);
+                var ptwox = parseFloat(document.getElementById("ptwox").value);
+                var ptwoy = parseFloat(document.getElementById("ptwoy").value);
+                var mpx = (ponex + ptwox)/2;
+                var mpy = (poney + ptwoy)/2;
                 var mp = "Midpoint of ( " + ponex + " , " + poney +
                        " ) , (  " + ptwox + " , " + ptwoy + " ) = ( " + mpx + " , " + mpy + " )";
                 var li = document.createElement("li");

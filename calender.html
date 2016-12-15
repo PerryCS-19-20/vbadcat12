@@ -11,8 +11,10 @@
             var num = 2;
             function makeCalendar() {
                 var calendar = document.getElementById("calendar");
+                var htag = document.getElementById("hone");
                 if(calendar != null){
-                    document.removeChild(calendar);
+                    document.body.removeChild(calendar);
+                    document.body.removeChild(htag);
                     makeCalendar();
                 }else{
                     var month = today.getMonth() + z;
@@ -112,19 +114,19 @@
                 }
       }
     function nextMonth(){
-        z = -5;
+        z = z+1;
         num = 2;
         makeCalendar();
     }
     function prevMonth(){
-        z = -5;
+        z = z-1;
         num = 2;
         makeCalendar();
     }
         </script>
     </head>
     <body onload="makeCalendar();">
-        <button id="bbutton" onclick="prevMonth;">Back</button>
-        <button id="fbutton" onclick="nextMonth;">Next</button>
+        <button id="bbutton" onclick ="prevMonth();">Back</button>
+        <button id="fbutton" onclick ="nextMonth();">Next</button>
     </body>
 </html>
