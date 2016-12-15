@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
         <title>Calendar</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
         <script>
             var z = 0;
             var ysub = 0;
@@ -137,7 +138,7 @@
     }
         </script>
     </head>
-    <body onload="makeCalendar();">
+    <body id="calbody" onload="makeCalendar();">
         <button id="ybbutton" onclick ="prevYr();">Prev Year</button>
         <button id="mbbutton" onclick ="prevMonth();">Prev Month</button>
         <button id="mfbutton" onclick ="nextMonth();">Next Month</button>
