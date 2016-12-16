@@ -119,11 +119,21 @@
                 
       }
     function nextMonth(){
+        if(month >= 11){
+            z = 0-month-1;
+            year = year+1;
+            ysub = ysub+1;
+        }
         z = z+1;
         num = 2;
         makeCalendar();
     }
     function prevMonth(){
+        if(month <= 0){
+            z = 0+month+1;
+            year = year-1;
+            ysub = ysub-1;
+        }
         z = z-1;
         num = 2;
         makeCalendar();
@@ -138,12 +148,55 @@
         num = 2;
         makeCalendar();
     }
+    function tenless(){
+        ysub = ysub-10;
+        num = 2;
+        makeCalendar();
+    }
+    function tenmore(){
+        ysub = ysub+10;
+        num = 2;
+        makeCalendar();
+    }
+    function hunmore(){
+        ysub = ysub+100;
+        num = 2;
+        makeCalendar();
+    }
+    function hunmore(){
+        ysub = ysub+100;
+        num = 2;
+        makeCalendar();
+    }
+    function onekmore(){
+        ysub = ysub+1000;
+        num = 2;
+        makeCalendar();
+    }
+    function onekmore(){
+        ysub = ysub+1000;
+        num = 2;
+        makeCalendar();
+    }
+    function gotoday(){
+        ysub = ysub-ysub;
+        z = z-z;
+        num = 2;
+        makeCalendar();
+    }
         </script>
     </head>
     <body id="calbody" onload="makeCalendar();">
+        <button style="background-color: yellow;" id="minusonekbutton" onclick ="onekless();">- 1,000 Years</button>
+        <button id="minushunbutton" onclick ="hunless();">- 100 Years</button>
+        <button id="minustenbutton" onclick ="tenless();">- 10 Years</button>
         <button id="ybbutton" onclick ="prevYr();">Prev Year</button>
         <button id="mbbutton" onclick ="prevMonth();">Prev Month</button>
+        <button id="todaybutton" onclick ="gotoday();">This Month</button>
         <button id="mfbutton" onclick ="nextMonth();">Next Month</button>
         <button id="yfbutton" onclick ="nextYr();">Next year</button>
+        <button id="plustenbutton" onclick ="tenmore();">+ 10 Years</button>
+        <button id="plushunbutton" onclick ="hunmore();">+ 100 Years</button>
+        <button style="background-color: yellow;" id="plusonekbutton" onclick ="onekmore();">+ 1,000 Years</button>
     </body>
 </html>
