@@ -9,10 +9,11 @@
             var z = 0;
             var ysub = 0;
             var today = new Date();
-            
+            var year;
             var num = 2;
+            var month;
             function makeCalendar() {
-                var year = today.getFullYear() + ysub;
+                year = today.getFullYear() + ysub;
                 var calendar = document.getElementById("calendar");
                 var htag = document.getElementById("hone");
                 if(calendar != null){
@@ -20,7 +21,7 @@
                     document.body.removeChild(htag);
                     makeCalendar();
                 }else{
-                    var month = today.getMonth() + z;
+                    month = today.getMonth() + z;
                     var hone = document.createElement("h1");
                      var mn = getMonthName(month);
                     hone.textContent = mn + " " + year;
@@ -115,6 +116,7 @@
                 case 11: 
                     return "December";
                 }
+                
       }
     function nextMonth(){
         z = z+1;
