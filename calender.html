@@ -31,17 +31,20 @@
                     for(var i = 0; i <= 5; i++){
                         var tr = document.createElement("tr");
                         calendar.appendChild(tr);
+                        tr.class = "caltr";
                     
                         for(var o = 0; o < 7; o++){
                             var td = document.createElement("td");
                             if(i == 0){
                                 var day = getDayName(o);
                                 td.textContent = day;
+                                td.class = "calth";
                             }else{ 
                                 var fd = getFirstDay(month, year);
                                 if(o == fd && i == 1){
                                     td.textContent = "1";
                                     passed = true;
+                                    td.class = "caltd";
                                 }else{
                                     var ed = getNumDays(month, year);
                                     if(i > 0 && o > fd || i > 1){
