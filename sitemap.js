@@ -1,4 +1,6 @@
+var open = true;
 function makeMenu(id){
+    if(open == false){
     var menubar = document.getElementById(id);
         var ul = document.createElement("ul");
          menubar.appendChild(ul);
@@ -63,11 +65,11 @@ function makeMenu(id){
             }
             aTag.appendChild(li);
             menubar.appendChild(aTag);
+            open = true;
         }
-}
-function deleteMenu(id){
-    var menubar = document.getElementById(id);
-    if(menubar != null){
-        menubar.textContent = "Other pages";
-    }
+      }else{
+        var menubar = document.getElementById(id);
+        menubar.textContent = "Other Pages";
+        open = false;
+      }
 }

@@ -32,7 +32,7 @@
    text-align: center;
 }
 a {
-    color: crimson;
+    color: lightskyblue;
 }
 #javastyle {
     background-Color: Black;
@@ -62,4 +62,10 @@ ttttable, #1, #2, #3, #4, #5, #6, #7, #8, #9{
     color:crimson;
     margin-left: auto;
     margin-right: auto;
+}
+#menubar {
+    color: lightblue;
+    text-align: left;
+    font-family: monospace;
+    background-color: gray;
 }
