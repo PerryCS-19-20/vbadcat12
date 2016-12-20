@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <script src="sitemap.js"></script>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
         <title>Calendar</title>
@@ -187,6 +188,7 @@
         </script>
     </head>
     <body id="calbody" onload="makeCalendar();">
+        <div id="menubar" onclick="makeMenu('menubar');" >Other Pages</div><br>
         <button style="background-color: yellow;" id="minusonekbutton" onclick ="onekless();">- 1,000 Years</button>
         <button style="background-color: orange;" id="minushunbutton" onclick ="hunless();">- 100 Years</button>
         <button style="background-color: red;" id="minustenbutton" onclick ="tenless();">- 10 Years</button>

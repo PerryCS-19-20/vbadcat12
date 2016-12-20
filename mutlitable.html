@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
         <title>Times Table</title>
+        <script src="sitemap.js"></script>
         <style>
             table, td, th {
                 border: solid 1px;
@@ -16,6 +17,7 @@
         </style>
     </head>
     <body onload="buildTimesTable()">
+        <div id="menubar" onclick="makeMenu('menubar');" >Other Pages</div><br>
         <script>
             var i;
             function buildTimesTable() {
