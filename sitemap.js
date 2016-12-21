@@ -44,22 +44,18 @@ function makeMenu(id){
                 aTag.setAttribute('href',"tictactoe.html");
             }
             if(s == 9){
-                li.textContent = "Multiplication Board";
-                aTag.setAttribute('href',"multitable.html");
-            }
-            if(s == 10){
                 li.textContent = "Chalk Board";
                 aTag.setAttribute('href',"chalkboard.html");
             }
-            if(s == 11){
+            if(s == 10){
                 li.textContent = "Mulitplication Table With Slider";
                 aTag.setAttribute('href',"slider.html");
             }
-            if(s == 12){
+            if(s == 11){
                 li.textContent = "Midpoint Calculator";
                 aTag.setAttribute('href',"calculator.html");
             }
-            if(s == 13){
+            if(s == 12){
                 li.textContent = "Calender In Progress";
                 aTag.setAttribute('href',"calender.html");
             }
