@@ -4,7 +4,7 @@ function makeMenu(id){
     var menubar = document.getElementById(id);
         var ul = document.createElement("ul");
          menubar.appendChild(ul);
-        for(var s = 0; s <= 13; s++){
+        for(var s = 0; s <= 12; s++){
             var aTag = document.createElement("a");
             var li = document.createElement("li");
              if(s == 0){
