@@ -49,11 +49,11 @@
                                     if(i > 0 && o > fd || i > 1){
                                     td.textContent = num;
                                         num++;
-                                    }else{
-                                        if(num >= ed){
-                                            td.textContent = " ";
-                                        }
                                     }
+                                    if(num >= ed){
+                                        td.textContent = " ";
+                                    }
+                                    
                                 }
                             }
                             tr.appendChild(td);
